@@ -4,9 +4,8 @@ import time
 API_KEY = '05XV1KB84W22CHHI'  # Always use your own, not demo
 url = f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey={API_KEY}'
 
-# Wait 12 seconds (Alpha Vantage allows 5 requests/minute for free accounts)
+# Wait 30 seconds (Alpha Vantage allows 5 requests/minute for free accounts)
 time.sleep(30)
-
 response = requests.get(url)
 #await(response) - Added this to be tried on the local version
 print("HTTP status code:", response.status_code)
