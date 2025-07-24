@@ -8,6 +8,7 @@ url = f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=I
 time.sleep(30)
 
 response = requests.get(url)
+#await(response) - Added this to be tried on the local version
 print("HTTP status code:", response.status_code)
 print("Raw response:", response.text)
 try:
